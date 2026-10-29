@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121116">
+  <meta name="description" content="Turn your Instagram follow-request backlog into a clear, calm list. Private, local, and completely in your hands.">
+  <title>Clear the queue | Insta Request Cleaner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Insta Request Cleaner home">
+        <span class="brand-icon">ic.</span>
+        <span>insta request cleaner</span>
+      </a>
+      <span class="privacy-badge">
+        <span class="status-dot"></span>
+        Local &amp; private
+      </span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">A FRESH START FOR YOUR FOLLOW LIST</p>
+        <h1>Less waiting.<br>More <span>peace of mind.</span></h1>
+        <p class="hero-description">
+          See every follow request you’ve sent, all in one calm little corner.
+          Find the ones you forgot, revisit the profiles that matter, and clear
+          the queue on your terms.
+        </p>
+
+        <div class="upload-card">
+          <div class="upload-heading">
+            <span class="step-number">01</span>
+            <div>
+                <h2>Bring over your request list</h2>
+                <p>Choose the HTML file from your Instagram data export.</p>
+            </div>
+          </div>
+
+          <label class="dropzone" for="fileInput">
+            <span class="upload-icon" aria-hidden="true">↑</span>
+            <strong>Drop in your Instagram export</strong>
+            <span class="dropzone-hint">One HTML file · nothing leaves your device</span>
+            <span class="upload-button">Choose file</span>
+          </label>
+          <input id="fileInput" type="file" accept=".html,.htm,text/html">
+
+          <p id="status" class="status" role="status" aria-live="polite">
+            Your file stays on your device. Nothing is uploaded.
+          </p>
+        </div>
+      </section>
+
+      <section id="results" class="results-section" hidden>
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">02 / YOUR NEXT MOVE</p>
+            <h2>Your request queue<span class="heading-dot">.</span></h2>
+          </div>
+          <span id="count" class="count-badge">0 accounts</span>
+        </div>
+
+        <div class="search-row">
+          <span aria-hidden="true">⌕</span>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Find a username..."
+            aria-label="Search accounts by username"
+            disabled
+          >
+        </div>
+
+        <ul id="accountList" class="account-list"></ul>
+
+        <p id="emptyState" class="empty-state" hidden>
+          Nothing here by that name. Try a different username.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>Clear the queue. Keep your calm.</span>
+      <span>Independent tool · not affiliated with Instagram.</span>
+    </footer>
+  </div>
+</body>
+</html>
